@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "education-ai-mcp"
+version = "1.0.0"
+description = "EdTech tools for teachers - lesson plans, quizzes, student progress, learning paths, rubric generation"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "MEOK AI Labs", email = "hello@meok.ai" },
+]
+keywords = ["mcp", "ai", "tools", "education"]
+dependencies = [
+    "mcp>=1.0.0",
+]
+
+[project.scripts]
+education-ai-mcp = "server:mcp.run"
