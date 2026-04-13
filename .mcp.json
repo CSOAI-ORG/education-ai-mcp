@@ -1,0 +1,24 @@
+{
+  "name": "education-ai-mcp",
+  "description": "MEOK AI Labs \u2014 EdTech tools for teachers and educators powered by MEOK AI Labs.",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/education-ai-mcp",
+  "runtime": "python",
+  "entrypoint": "server.py",
+  "tools": [
+    "generate_lesson_plan",
+    "create_quiz",
+    "analyze_student_progress",
+    "recommend_learning_path",
+    "generate_rubric"
+  ],
+  "categories": [
+    "Education",
+    "Learning"
+  ],
+  "pricing": {
+    "free": "50 calls/day",
+    "pro": "$9/mo"
+  }
+}

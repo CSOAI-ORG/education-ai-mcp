@@ -1,0 +1,10 @@
+name: education-ai-mcp
+description: "MEOK AI Labs — EdTech tools for teachers and educators powered by MEOK AI Labs."
+vendor: MEOK AI Labs
+homepage: https://meok.ai
+repository: https://github.com/CSOAI-ORG/education-ai-mcp
+license: MIT
+categories: [Education, Learning]
+tags: [education, e-learning, tutoring, course-design, educational-technology]
+runtime: python
+entrypoint: server.py
