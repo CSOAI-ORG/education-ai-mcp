@@ -1,24 +1,147 @@
 {
   "name": "education-ai-mcp",
-  "description": "MEOK AI Labs \u2014 EdTech tools for teachers and educators powered by MEOK AI Labs.",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/education-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
+  "description": "> EdTech tools for teachers - lesson plans, quizzes, student progress, learning paths, rubric generation",
+  "version": "1.0.0",
   "tools": [
-    "generate_lesson_plan",
-    "create_quiz",
-    "analyze_student_progress",
-    "recommend_learning_path",
-    "generate_rubric"
-  ],
-  "categories": [
-    "Education",
-    "Learning"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+    {
+      "name": "generate_lesson_plan",
+      "description": "Generate a structured lesson plan with objectives, activities, and assessment.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "subject": {
+            "type": "string"
+          },
+          "topic": {
+            "type": "string"
+          },
+          "age_group": {
+            "type": "string"
+          },
+          "duration_minutes": {
+            "type": "integer"
+          },
+          "learning_objectives": {
+            "type": "string"
+          },
+          "differentiation": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "subject",
+          "topic"
+        ]
+      }
+    },
+    {
+      "name": "create_quiz",
+      "description": "Create a quiz with various question types aligned to Bloom's taxonomy.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "topic": {
+            "type": "string"
+          },
+          "num_questions": {
+            "type": "integer"
+          },
+          "difficulty": {
+            "type": "string"
+          },
+          "question_types": {
+            "type": "string"
+          },
+          "age_group": {
+            "type": "string"
+          },
+          "include_answers": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "topic"
+        ]
+      }
+    },
+    {
+      "name": "analyze_student_progress",
+      "description": "Analyze student performance trends and generate progress report.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "student_name": {
+            "type": "string"
+          },
+          "assessments": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "target_grade": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "student_name",
+          "assessments"
+        ]
+      }
+    },
+    {
+      "name": "recommend_learning_path",
+      "description": "Recommend a personalized learning path based on student profile.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "subject": {
+            "type": "string"
+          },
+          "current_level": {
+            "type": "string"
+          },
+          "learning_style": {
+            "type": "string"
+          },
+          "goals": {
+            "type": "string"
+          },
+          "available_hours_per_week": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "subject"
+        ]
+      }
+    },
+    {
+      "name": "generate_rubric",
+      "description": "Generate an assessment rubric with detailed criteria and descriptors.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "assignment_title": {
+            "type": "string"
+          },
+          "criteria": {
+            "type": "string"
+          },
+          "levels": {
+            "type": "integer"
+          },
+          "max_score": {
+            "type": "integer"
+          },
+          "assignment_type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "assignment_title"
+        ]
+      }
+    }
+  ]
 }

@@ -1,10 +1,96 @@
 name: education-ai-mcp
-description: "MEOK AI Labs — EdTech tools for teachers and educators powered by MEOK AI Labs."
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/education-ai-mcp
-license: MIT
-categories: [Education, Learning]
-tags: [education, e-learning, tutoring, course-design, educational-technology]
-runtime: python
-entrypoint: server.py
+description: '> EdTech tools for teachers - lesson plans, quizzes, student progress,
+  learning paths, rubric generation'
+version: 1.0.0
+tools:
+- name: generate_lesson_plan
+  description: Generate a structured lesson plan with objectives, activities, and
+    assessment.
+  parameters:
+  - name: subject
+    type: string
+    required: true
+  - name: topic
+    type: string
+    required: true
+  - name: age_group
+    type: string
+    required: false
+  - name: duration_minutes
+    type: integer
+    required: false
+  - name: learning_objectives
+    type: string
+    required: false
+  - name: differentiation
+    type: boolean
+    required: false
+- name: create_quiz
+  description: Create a quiz with various question types aligned to Bloom's taxonomy.
+  parameters:
+  - name: topic
+    type: string
+    required: true
+  - name: num_questions
+    type: integer
+    required: false
+  - name: difficulty
+    type: string
+    required: false
+  - name: question_types
+    type: string
+    required: false
+  - name: age_group
+    type: string
+    required: false
+  - name: include_answers
+    type: boolean
+    required: false
+- name: analyze_student_progress
+  description: Analyze student performance trends and generate progress report.
+  parameters:
+  - name: student_name
+    type: string
+    required: true
+  - name: assessments
+    type: array
+    required: true
+  - name: target_grade
+    type: number
+    required: false
+- name: recommend_learning_path
+  description: Recommend a personalized learning path based on student profile.
+  parameters:
+  - name: subject
+    type: string
+    required: true
+  - name: current_level
+    type: string
+    required: false
+  - name: learning_style
+    type: string
+    required: false
+  - name: goals
+    type: string
+    required: false
+  - name: available_hours_per_week
+    type: integer
+    required: false
+- name: generate_rubric
+  description: Generate an assessment rubric with detailed criteria and descriptors.
+  parameters:
+  - name: assignment_title
+    type: string
+    required: true
+  - name: criteria
+    type: string
+    required: false
+  - name: levels
+    type: integer
+    required: false
+  - name: max_score
+    type: integer
+    required: false
+  - name: assignment_type
+    type: string
+    required: false

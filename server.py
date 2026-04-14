@@ -3,6 +3,11 @@ Education AI MCP Server
 EdTech tools for teachers and educators powered by MEOK AI Labs.
 """
 
+
+import sys, os
+sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
+from auth_middleware import check_access
+
 import time
 import random
 import hashlib
@@ -53,7 +58,7 @@ def generate_lesson_plan(
     age_group: str = "14-16",
     duration_minutes: int = 60,
     learning_objectives: list[str] | None = None,
-    differentiation: bool = True) -> dict:
+    differentiation: bool = True, api_key: str = "") -> dict:
     """Generate a structured lesson plan with objectives, activities, and assessment.
 
     Args:
@@ -64,6 +69,10 @@ def generate_lesson_plan(
         learning_objectives: Custom objectives (auto-generated if omitted)
         differentiation: Include differentiation strategies
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     _check_rate_limit("generate_lesson_plan")
 
     if not learning_objectives:
@@ -141,7 +150,7 @@ def create_quiz(
     difficulty: str = "mixed",
     question_types: list[str] | None = None,
     age_group: str = "14-16",
-    include_answers: bool = True) -> dict:
+    include_answers: bool = True, api_key: str = "") -> dict:
     """Create a quiz with various question types aligned to Bloom's taxonomy.
 
     Args:
@@ -152,6 +161,10 @@ def create_quiz(
         age_group: Target age group
         include_answers: Include answer key
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     _check_rate_limit("create_quiz")
 
     num_questions = min(num_questions, 30)
@@ -239,7 +252,7 @@ def create_quiz(
 def analyze_student_progress(
     student_name: str,
     assessments: list[dict],
-    target_grade: float = 70.0) -> dict:
+    target_grade: float = 70.0, api_key: str = "") -> dict:
     """Analyze student performance trends and generate progress report.
 
     Args:
@@ -247,6 +260,10 @@ def analyze_student_progress(
         assessments: List of dicts with keys: subject, score (0-100), date, assessment_name (optional)
         target_grade: Target grade percentage
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     _check_rate_limit("analyze_student_progress")
 
     if not assessments:
@@ -321,7 +338,7 @@ def recommend_learning_path(
     current_level: str = "intermediate",
     learning_style: str = "visual",
     goals: list[str] | None = None,
-    available_hours_per_week: int = 5) -> dict:
+    available_hours_per_week: int = 5, api_key: str = "") -> dict:
     """Recommend a personalized learning path based on student profile.
 
     Args:
@@ -331,6 +348,10 @@ def recommend_learning_path(
         goals: Specific learning goals
         available_hours_per_week: Hours available for study per week
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     _check_rate_limit("recommend_learning_path")
 
     goals = goals or [f"Improve proficiency in {subject}"]
@@ -390,7 +411,7 @@ def generate_rubric(
     criteria: list[str] | None = None,
     levels: int = 4,
     max_score: int = 100,
-    assignment_type: str = "essay") -> dict:
+    assignment_type: str = "essay", api_key: str = "") -> dict:
     """Generate an assessment rubric with detailed criteria and descriptors.
 
     Args:
@@ -400,6 +421,10 @@ def generate_rubric(
         max_score: Maximum total score
         assignment_type: Type: essay, presentation, project, lab_report, portfolio
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     _check_rate_limit("generate_rubric")
 
     levels = max(3, min(5, levels))
