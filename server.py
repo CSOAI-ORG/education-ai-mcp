@@ -53,8 +53,7 @@ def generate_lesson_plan(
     age_group: str = "14-16",
     duration_minutes: int = 60,
     learning_objectives: list[str] | None = None,
-    differentiation: bool = True,
-) -> dict:
+    differentiation: bool = True) -> dict:
     """Generate a structured lesson plan with objectives, activities, and assessment.
 
     Args:
@@ -142,8 +141,7 @@ def create_quiz(
     difficulty: str = "mixed",
     question_types: list[str] | None = None,
     age_group: str = "14-16",
-    include_answers: bool = True,
-) -> dict:
+    include_answers: bool = True) -> dict:
     """Create a quiz with various question types aligned to Bloom's taxonomy.
 
     Args:
@@ -241,8 +239,7 @@ def create_quiz(
 def analyze_student_progress(
     student_name: str,
     assessments: list[dict],
-    target_grade: float = 70.0,
-) -> dict:
+    target_grade: float = 70.0) -> dict:
     """Analyze student performance trends and generate progress report.
 
     Args:
@@ -324,8 +321,7 @@ def recommend_learning_path(
     current_level: str = "intermediate",
     learning_style: str = "visual",
     goals: list[str] | None = None,
-    available_hours_per_week: int = 5,
-) -> dict:
+    available_hours_per_week: int = 5) -> dict:
     """Recommend a personalized learning path based on student profile.
 
     Args:
@@ -394,8 +390,7 @@ def generate_rubric(
     criteria: list[str] | None = None,
     levels: int = 4,
     max_score: int = 100,
-    assignment_type: str = "essay",
-) -> dict:
+    assignment_type: str = "essay") -> dict:
     """Generate an assessment rubric with detailed criteria and descriptors.
 
     Args:
