@@ -1,6 +1,5 @@
 name: education-ai-mcp
-description: '> EdTech tools for teachers - lesson plans, quizzes, student progress,
-  learning paths, rubric generation'
+description: MEOK AI Labs MCP Server
 version: 1.0.0
 tools:
 - name: generate_lesson_plan
@@ -20,7 +19,7 @@ tools:
     type: integer
     required: false
   - name: learning_objectives
-    type: string
+    type: array
     required: false
   - name: differentiation
     type: boolean
@@ -38,7 +37,7 @@ tools:
     type: string
     required: false
   - name: question_types
-    type: string
+    type: array
     required: false
   - name: age_group
     type: string
@@ -71,7 +70,7 @@ tools:
     type: string
     required: false
   - name: goals
-    type: string
+    type: array
     required: false
   - name: available_hours_per_week
     type: integer
@@ -83,7 +82,7 @@ tools:
     type: string
     required: true
   - name: criteria
-    type: string
+    type: array
     required: false
   - name: levels
     type: integer

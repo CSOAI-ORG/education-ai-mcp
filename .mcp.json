@@ -1,6 +1,6 @@
 {
   "name": "education-ai-mcp",
-  "description": "> EdTech tools for teachers - lesson plans, quizzes, student progress, learning paths, rubric generation",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Sovereign AI tools for everyone.",
   "version": "1.0.0",
   "tools": [
     {
@@ -22,7 +22,7 @@
             "type": "integer"
           },
           "learning_objectives": {
-            "type": "string"
+            "type": "array"
           },
           "differentiation": {
             "type": "boolean"
@@ -50,7 +50,7 @@
             "type": "string"
           },
           "question_types": {
-            "type": "string"
+            "type": "array"
           },
           "age_group": {
             "type": "string"
@@ -74,10 +74,7 @@
             "type": "string"
           },
           "assessments": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
+            "type": "array"
           },
           "target_grade": {
             "type": "number"
@@ -105,7 +102,7 @@
             "type": "string"
           },
           "goals": {
-            "type": "string"
+            "type": "array"
           },
           "available_hours_per_week": {
             "type": "integer"
@@ -126,7 +123,7 @@
             "type": "string"
           },
           "criteria": {
-            "type": "string"
+            "type": "array"
           },
           "levels": {
             "type": "integer"
