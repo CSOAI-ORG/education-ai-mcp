@@ -1,0 +1,57 @@
+{
+  "name": "education-ai",
+  "description": "Education Ai tools powered by MEOK AI Labs.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/education-ai-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "generate_lesson_plan",
+      "description": "Generate a structured lesson plan with objectives, activities, and assessment."
+    },
+    {
+      "name": "create_quiz",
+      "description": "Create a quiz with various question types aligned to Bloom's taxonomy."
+    },
+    {
+      "name": "analyze_student_progress",
+      "description": "Analyze student performance trends and generate progress report."
+    },
+    {
+      "name": "recommend_learning_path",
+      "description": "Recommend a personalized learning path based on student profile."
+    },
+    {
+      "name": "generate_rubric",
+      "description": "Generate an assessment rubric with detailed criteria and descriptors."
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning",
+    "Education & Research"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
