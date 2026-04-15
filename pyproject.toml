@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 [project]
 name = "education-ai-mcp"
 version = "1.0.0"
-description = "MEOK AI Labs — education-ai-mcp"
+description = "AI-powered education ai MCP server for agents. Supports generate lesson plan, create quiz, analyze student progress. By MEOK AI Labs."
 license = {file = "LICENSE"}
 requires-python = ">=3.10"
 authors = [{name = "MEOK AI Labs", email = "nicholas@meok.ai"}]

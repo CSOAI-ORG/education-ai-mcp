@@ -1,5 +1,6 @@
 name: education-ai-mcp
-description: MEOK AI Labs MCP Server
+description: AI-powered education ai MCP server for agents. Supports generate lesson
+  plan, create quiz, analyze student progress. By MEOK AI Labs.
 version: 1.0.0
 tools:
 - name: generate_lesson_plan
