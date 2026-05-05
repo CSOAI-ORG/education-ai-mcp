@@ -1,56 +1,38 @@
-# Education AI MCP
+<div align="center">
 
-> EdTech tools for teachers - lesson plans, quizzes, student progress, learning paths, rubric generation
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/education-ai-mcp)](https://github.com/CSOAI-ORG/education-ai-mcp/stargazers)
 
-Built by **MEOK AI Labs** | [meok.ai](https://meok.ai)
+# ueducationU aiU mcp
 
-## Features
+**Built by **MEOK AI Labs** | [meok.ai](https://meok.ai)**
 
-| Tool | Description |
-|------|-------------|
-| `generate_lesson_plan` | See tool docstring for details |
-| `create_quiz` | See tool docstring for details |
-| `analyze_student_progress` | See tool docstring for details |
-| `recommend_learning_path` | See tool docstring for details |
-| `generate_rubric` | See tool docstring for details |
+[![npm version](https://img.shields.io/npm/v/@meok-ai/education-ai-mcp)](https://www.npmjs.com/package/@meok-ai/education-ai-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/education-ai-mcp/issues)
+
+</div>
+
+---
 
 ## Installation
 
 ```bash
-pip install mcp
+pip install education-ai-mcp
+# or
+npm install -g @meok-ai/education-ai-mcp
 ```
 
-## Usage
+## Quick Start
 
-### As an MCP Server
+See the project repository for full documentation and examples.
 
-```bash
-python server.py
-```
+## Enterprise Support
 
-### Claude Desktop Configuration
-
-Add to your `claude_desktop_config.json`:
-
-```json
-{
-  "mcpServers": {
-    "education-ai-mcp": {
-      "command": "python",
-      "args": ["/path/to/education-ai-mcp/server.py"]
-    }
-  }
-}
-```
-
-## Rate Limits
-
-Free tier includes **30-50 calls per tool per day**. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
 ## License
 
-MIT License - see [LICENSE](LICENSE) for details.
-
----
-
-Built with FastMCP by MEOK AI Labs
+MIT © [CSOAI](https://csoai.org)
