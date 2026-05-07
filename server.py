@@ -68,6 +68,20 @@ def generate_lesson_plan(
         duration_minutes: Lesson duration in minutes
         learning_objectives: Custom objectives (auto-generated if omitted)
         differentiation: Include differentiation strategies
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -160,6 +174,20 @@ def create_quiz(
         question_types: Types to include: multiple_choice, true_false, short_answer, fill_blank, matching
         age_group: Target age group
         include_answers: Include answer key
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -259,6 +287,20 @@ def analyze_student_progress(
         student_name: Student's name
         assessments: List of dicts with keys: subject, score (0-100), date, assessment_name (optional)
         target_grade: Target grade percentage
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -347,6 +389,21 @@ def recommend_learning_path(
         learning_style: Learning style: visual, auditory, kinesthetic, reading_writing
         goals: Specific learning goals
         available_hours_per_week: Hours available for study per week
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -420,6 +477,20 @@ def generate_rubric(
         levels: Number of performance levels (3-5)
         max_score: Maximum total score
         assignment_type: Type: essay, presentation, project, lab_report, portfolio
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
