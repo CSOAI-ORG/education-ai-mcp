@@ -1,3 +1,5 @@
+[![education-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/education-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/education-ai-mcp)
+
 <div align="center">
 
 [![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/education-ai-mcp)](https://github.com/CSOAI-ORG/education-ai-mcp/stargazers)
