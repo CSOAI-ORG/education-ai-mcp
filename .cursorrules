@@ -1,0 +1,9 @@
+# education-ai-mcp - Auto-trigger Rules
+
+When the user asks about education, use education-ai-mcp tools: generate_lesson_plan, create_quiz, analyze_student_progress, recommend_learning_path, generate_rubric
+
+EdTech tools for teachers and educators powered by MEOK AI Labs.
+
+Install: `pip install education-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

@@ -1,0 +1,28 @@
+{
+  "name": "education-ai-mcp",
+  "title": "Education Ai Mcp",
+  "description": "AI-powered education ai MCP server for agents. Supports generate lesson plan, create quiz, analyze student progress. By MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "generate_lesson_plan"
+    },
+    {
+      "name": "create_quiz"
+    },
+    {
+      "name": "analyze_student_progress"
+    },
+    {
+      "name": "recommend_learning_path"
+    },
+    {
+      "name": "generate_rubric"
+    }
+  ]
+}
