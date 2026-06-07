@@ -1,0 +1,68 @@
+{
+  "name": "education-ai-mcp",
+  "description": "Education Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/education-ai-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "generate_lesson_plan",
+      "name": "Generate Lesson Plan",
+      "description": "generate_lesson_plan via education-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "create_quiz",
+      "name": "Create Quiz",
+      "description": "create_quiz via education-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "analyze_student_progress",
+      "name": "Analyze Student Progress",
+      "description": "analyze_student_progress via education-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "recommend_learning_path",
+      "name": "Recommend Learning Path",
+      "description": "recommend_learning_path via education-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "generate_rubric",
+      "name": "Generate Rubric",
+      "description": "generate_rubric via education-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}

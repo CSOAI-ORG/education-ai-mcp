@@ -1,0 +1,23 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "education-ai-mcp",
+    "description": "Education Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "education-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "generate_lesson_plan",
+      "create_quiz",
+      "analyze_student_progress",
+      "recommend_learning_path",
+      "generate_rubric"
+    ]
+  }
+}
